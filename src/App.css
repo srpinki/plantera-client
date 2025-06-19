@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    --color-primary: #2c2c2c;
+    --color-secondary: #69af07;
+    --color-base-200: #F3F3F3;
+    --color-base-300: #E7E7E7;
+    --color-accent: #706F6F;
+}
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    font-family: "Roboto", sans-serif
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Raleway", sans-serif;
+}
+
+.header a:hover{
+color: #69af07;
+}
+
+.header a.active{
+    color: #69af07;
+    font-weight: bold;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: #E7E7E7 !important; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #69af07 !important; 
+}
