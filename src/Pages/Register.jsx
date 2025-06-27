@@ -81,7 +81,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f7fbf2]">
+    <div className="min-h-screen flex items-center justify-center bg-[#f7fbf2] py-12 mt-18">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow border border-green-100">
         <h2 className="text-2xl font-bold text-center mb-1">
           Create an account

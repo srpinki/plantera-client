@@ -3,7 +3,6 @@ import { FiMenu } from "react-icons/fi";
 import { Link, NavLink } from "react-router";
 import logoImage from "/Plantera-logo.png";
 import { AuthContext } from "../AuthProvider/Context";
-import { IoMoonOutline, IoSunny } from "react-icons/io5";
 
 const Header = () => {
   const { user, logOut } = use(AuthContext);
@@ -38,17 +37,20 @@ const Header = () => {
     <>
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/all-plants"}>All Plants</NavLink>
-      <NavLink to={"/add-plant"}>Add Plant</NavLink>
-      <NavLink to={"/auth/my-plants"}>My Plants</NavLink>
+      <NavLink to={"/about"}>About Us</NavLink>
+      <NavLink to={"/contact"}>Contact Us</NavLink>
 
       <div className="relative group flex items-center">
         {user ? (
           <div>
+            <div className="flex items-center gap-4">
             <img
               src={user.photoURL}
               alt="User Avatar"
               className="w-10 h-10 rounded-full border-2 border-secondary cursor-pointer"
             />
+            <NavLink to={"/auth/dashboard/overview"}>Dashboard</NavLink>
+            </div>
             <div className="absolute hidden group-hover:flex flex-col right-0 mt-2 bg-white shadow-lg p-4 rounded z-50 text-sm min-w-[200px]">
               <p className="font-semibold">{user.displayName}</p>
               <p className="text-gray-500 text-xs">{user.email}</p>
@@ -66,7 +68,6 @@ const Header = () => {
           </a>
         )}
       </div>
-      <NavLink to={"/auth/register"}>Register</NavLink>
 
       {/* darkmode toggle */}
 
