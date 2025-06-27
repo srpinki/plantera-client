@@ -4,7 +4,6 @@ import Home from "../Pages/Home";
 import AddPlant from "../Pages/AddPlant";
 import PlantsDetails from "../Components/PlantsDetails";
 import AllPlants from "../Pages/allPlants";
-import AuthLayouts from "../AuthLayouts/AuthLayouts";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import MyPlants from "../Pages/MyPlants";
@@ -12,6 +11,12 @@ import Error from "../Pages/Error";
 import PrivateRoute from "../AuthProvider/PrivateRoute";
 import Loading from "../Components/Loading/Loading";
 import UpdatePlants from "../Pages/UpdatePlants";
+import AuthLayouts from "../Layouts/AuthLayouts/AuthLayouts";
+import WateringGuide from "../Pages/WateringGuide ";
+import FertilizingGuide from "../Pages/FertilizingGuide";
+import SeasonalCare from "../Pages/SeasonalCare";
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import TermsOfService from "../Pages/TermsOfService";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +44,26 @@ const router = createBrowserRouter([
                 hydrateFallbackElement: <Loading></Loading>,
                 loader: () => fetch('https://plant-area-server-side.vercel.app/plants'),
                 Component: AllPlants
+            },
+            {
+                path: '/watering-guide',
+                Component: WateringGuide
+            },
+            {
+                path: '/fertilizing-tips',
+                Component: FertilizingGuide
+            },
+            {
+                path: '/seasonal-care',
+                Component: SeasonalCare
+            },
+            {
+                path: '/privacy-policy',
+                Component: PrivacyPolicy
+            },
+            {
+                path: '/terms-services',
+                Component: TermsOfService
             }
         ]
     },
@@ -63,6 +88,7 @@ const router = createBrowserRouter([
                 loader: () => fetch('https://plant-area-server-side.vercel.app/plants'),
                 Component: UpdatePlants
             }
+            
         ]
     },
       {

@@ -1,14 +1,13 @@
 import React from "react";
 
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import logoImage from "/logo.png";
 import { Link } from "react-router";
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-10">
+    <footer className="bg-primary text-gray-200 py-10">
       <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-        
         <div>
           <div className="flex items-center mb-4">
             <Link to="/" className="text-2xl font-bold text-primary">
@@ -20,9 +19,23 @@ const Footer = () => {
             indoor jungle with ease.
           </p>
           <div className="flex mt-4 space-x-3 text-gray-400">
-            <FaInstagram className="hover:text-white cursor-pointer" />
-            <FaFacebookF className="hover:text-white cursor-pointer" />
-            <FaTwitter className="hover:text-white cursor-pointer" />
+            <a
+              href="https://www.linkedin.com/in/srpinki/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-white cursor-pointer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61568221811046"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-white cursor-pointer"
+            >
+              <FaFacebookF />
+            </a>
+            
           </div>
         </div>
 
@@ -36,9 +49,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-                <Link to={"/all-plants"} className="hover:text-white">All Plants</Link>
+              <Link to={"/all-plants"} className="hover:text-white">
+                All Plants
+              </Link>
             </li>
-            
           </ul>
         </div>
 
@@ -47,29 +61,13 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-3">Plant Care Guides</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:text-white">
-                Watering Guide
-              </a>
+              <Link to={'/watering-guide'} className="hover:text-white">Watering Guide</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Light Requirements
-              </a>
+              <Link to={'/fertilizing-tips'} className="hover:text-white">Fertilizing Tips</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Pest Control
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Fertilizing Tips
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Seasonal Care
-              </a>
+              <Link to={'/seasonal-care'} className="hover:text-white">Seasonal Care</Link>
             </li>
           </ul>
         </div>
@@ -102,12 +100,8 @@ const Footer = () => {
       <div className="mt-10 border-t border-gray-700 pt-4 text-sm text-center text-gray-400">
         © 2025 Plantera. All rights reserved.
         <div className="mt-2 space-x-4">
-          <a href="#" className="hover:text-white">
-            Privacy Policy
-          </a>
-          <a href="#" className="hover:text-white">
-            Terms of Service
-          </a>
+          <Link to={'/privacy-policy'} className="hover:text-white">Privacy Policy</Link>
+          <Link to={'/terms-services'} className="hover:text-white">Terms of Service</Link>
         </div>
       </div>
     </footer>

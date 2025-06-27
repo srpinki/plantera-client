@@ -99,7 +99,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 px-4 lg:px-8 shadow-md header">
+    <div className="fixed top-0 left-0 z-50 navbar bg-base-100 px-4 lg:px-8 shadow-md header">
       {/* Left: Logo */}
       <div className="flex-1">
         <Link to="/" className="text-2xl font-bold text-primary">

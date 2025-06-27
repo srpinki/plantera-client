@@ -38,7 +38,7 @@ const PlantCareMistakes = () => {
   ];
 
   return (
-    <div className="bg-[#f7fbf2] min-h-screen p-4 py-12 ">
+    <div className="bg-[#f7fbf2] py-12 lg:py-16">
       <div className="w-11/12 mx-auto">
       <div className="text-center mb-10">
         <div className="w-[70px] flex justify-center items-center mx-auto">

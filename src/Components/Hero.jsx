@@ -12,7 +12,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-[70vh]">
       <Swiper
         pagination={{ dynamicBullets: true }}
           autoplay={{
@@ -20,7 +20,7 @@ const Hero = () => {
           disableOnInteraction: false,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper w-full h-[400px] lg:h-[600px]"
+        className="mySwiper w-full h-full"
       >
         {/* slider-1 */}
         <SwiperSlide className="relative w-full h-full">
